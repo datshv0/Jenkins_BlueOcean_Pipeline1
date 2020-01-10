@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Saludo') {
       steps {
-        bat 'echo \'hello mateo\''
+        bat 'msg * \'hello mateo\''
       }
     }
 
