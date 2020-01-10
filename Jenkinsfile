@@ -1,9 +1,12 @@
 pipeline {
   agent any
+   parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+    }
   stages {
     stage('Saludo') {
       steps {
-        sh 'echo \'hola mateo\''
+         echo "Hello ${params.PERSON}"
       }
     }
 
